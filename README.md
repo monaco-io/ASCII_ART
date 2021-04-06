@@ -1,15 +1,15 @@
-# SHELL_LOGO
+# ASCII_ART
 
 ## how to install
 
 add this to your .zshrc/.bashrc
 
 ```sh
-SHELL_LOGO --name=bilibili.com
+ASCII_ART --name=bilibili.com
 ```
 
 ## options
 
 ```sh
-SHELL_LOGO --name=tencent.com
+ASCII_ART --name=tencent.com
 ```

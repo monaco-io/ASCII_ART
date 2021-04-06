@@ -5,6 +5,8 @@ import (
 	"flag"
 	"fmt"
 	"path"
+
+	"github.com/monaco-io/ASCII_ART/font"
 )
 
 var (
@@ -22,8 +24,7 @@ func init() {
 func main() {
 	logo, err := content.ReadFile(path.Join("logo", name))
 	if err != nil {
-		panic(err)
+		logo = []byte(font.AsciiArt(name, ""))
 	}
-
 	fmt.Printf("%s", logo)
 }

@@ -19,6 +19,13 @@ var (
 	fonts embed.FS
 )
 
+func List() {
+	files, _ := fonts.ReadDir("fonts")
+	for i := range files {
+		fmt.Println(strings.Replace(files[i].Name(), ".flf", "", 1))
+	}
+}
+
 func fontBytes(name string) []byte {
 	b, _ := fonts.ReadFile(path.Join("fonts", name+".flf"))
 	return b
